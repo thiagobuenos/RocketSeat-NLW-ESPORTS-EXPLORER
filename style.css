@@ -21,6 +21,7 @@ section ul {
 .channel-list img{
   width: 70px;
   border-radius: 50%;  
+  border: 1px solid #443E54;
 }
 
 body {
@@ -34,6 +35,33 @@ body {
 body * {
   font-family: 'Inter', sans-serif;
   line-height: 160%
+}
+
+header {
+  text-align: center;
+  margin-top: 32px;
+}
+
+header div {
+  
+  width: 120px;
+  margin: auto;
+
+  background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+
+  border-radius: 50%;
+  display: flex;
+  padding: 4px;
+  transition: transform .3s;
+}
+
+header div:hover {
+  transform: scale(1.1)
+}
+
+header img {
+  width: 100%;
+  border-radius: 50%;
 }
 
 main {
@@ -67,3 +95,11 @@ section p {
   letter-spacing: -0.18px;
   color: #A1A1AA;
 }
+
+section ul li {
+  transition: transform .3s;
+}
+
+section ul li:hover {
+  transform: scale(1.1)
+}  
