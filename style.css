@@ -40,6 +40,7 @@ body * {
 header {
   text-align: center;
   margin-top: 32px;
+  height: calc(120px + 32px);
 }
 
 header div {
@@ -53,6 +54,9 @@ header div {
   display: flex;
   padding: 4px;
   transition: transform .3s;
+
+  animation: fromTop .7s .2s backwards;
+  
 }
 
 header div:hover {
@@ -103,3 +107,44 @@ section ul li {
 section ul li:hover {
   transform: scale(1.1)
 }  
+
+main section {
+  animation: fromBottom .7s backwards;
+}
+
+main section:nth-child(1) {
+  animation-delay: 0;
+}
+
+main section:nth-child(2) {
+  animation-delay: .4s;
+}
+
+main section:nth-child(3) {
+  animation-delay: .7s;
+}
+
+
+/* animations */
+
+@keyframes fromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);}
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(30px);}
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
